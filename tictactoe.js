@@ -52,6 +52,7 @@ function play(event){
       }
       else {
         setMessage("pick another square.");
+        turn=!turn;
       }
 
     }
@@ -64,7 +65,7 @@ function play(event){
        }
        winner = player;
        setMessage("Player "+player+ " Wins");
-
+       finalResult();
 
      }
      else {
@@ -107,7 +108,7 @@ function restartGame(){
   for(var i=1;i<=9;i++){
     clearBox(i);
   }
-  finalResult();
+  //finalResult();
   turn=false;
   winner=null;
   counter=0;
@@ -116,4 +117,3 @@ function restartGame(){
 function clearBox(number){
   return document.getElementById(number).innerText="";
 }
-
